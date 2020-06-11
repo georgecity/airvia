@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Sidebar from "../layout/Sidebar";
 import { Link } from "react-router-dom";
-import Button from '@material-ui/core/Button'
 
 export default class Dashboard extends Component {
   render() {

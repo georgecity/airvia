@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 const Customer = props => ( //functional react component, no state or lifecycle methods
@@ -11,7 +12,10 @@ const Customer = props => ( //functional react component, no state or lifecycle 
         <td>{props.customer.discount}</td>
         <td>{props.customer.customerStatus}</td>
         <td>
-            <Link to={"edit/"+props.customer._id}>Edit</Link> | <a href="#" onClick={() => {props.deleteCustomer(props.customer._id)}}>Delete</a>
+            <Link to={"edit/"+props.customer._id}>Edit</Link> 
+        </td>
+        <td>
+            <Button variant="contained" color="default" onClick={() =>{props.deleteCustomer(props.customer._id)}}>Delete</Button>
         </td>
     </tr>
 )
@@ -66,6 +70,7 @@ export default class CustomerList extends Component {
                             <th>Contact Number</th>
                             <th>Discount</th>
                             <th>Status</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>

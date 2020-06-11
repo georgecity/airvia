@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
-import classnames from "classnames";
 import axios from "axios";
 
 class EditProfile extends Component {
@@ -89,9 +88,6 @@ class EditProfile extends Component {
                             onChange={this.onChange}
                             error={errors.name}
                             id="name"
-                            className={classnames("", {
-                                invalid: errors.name
-                            })}
                             />
                             <span className="red-text">{errors.name}</span> 
                     </div>
@@ -99,14 +95,10 @@ class EditProfile extends Component {
                         <label>Address: </label>
                         <input type="text"
                             required
-                            className="form-control"
                             value={this.state.address}
                             onChange={this.onChange}
                             error={errors.address}
                             id="address"
-                            className={classnames("", {
-                                invalid: errors.address
-                            })}
                             />
                             <span className="red-text">{errors.address}</span>
                     </div>
@@ -119,9 +111,6 @@ class EditProfile extends Component {
                             onChange={this.onChange}
                             error={errors.contactNumber}
                             id="contactNumber"
-                            className={classnames("", {
-                                invalid: errors.contactNumber
-                            })}
                             />
                             <span className="red-text">{errors.contactNumber}</span>
                     </div>

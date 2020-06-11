@@ -62,7 +62,6 @@ class AddDiscount extends Component {
 
     render() {
 
-        const { user } = this.props.auth;
 
         return(
             //form code 

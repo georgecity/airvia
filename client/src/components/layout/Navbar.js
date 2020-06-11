@@ -35,7 +35,7 @@ class Navbar extends Component {
               {isAuthenticated ? (
                   <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <Link className="nav-link" onClick={this.onLogout}>
+                    <Link className="nav-link" to="/" onClick={this.onLogout}>
                       Logout
                     </Link>
                   </li>

@@ -67,7 +67,7 @@ import axios from 'axios';
         console.log(quantity);
 
         for(var i= 0 ;i < quantity ; i++){
-         newBlanks [i] = {
+         newBlanks[i] = {
             owner: this.state.owner,
             blankID: blankID ++,
             blankType: this.state.blankType,
@@ -75,7 +75,7 @@ import axios from 'axios';
         };
     }
         
-            for(var i= 0 ;i < quantity ; i++){
+            for(i= 0 ;i < quantity ; i++){
                 axios.post('/api/stock/add', newBlanks[i]) 
             .then(res => console.log(res.data));
             }

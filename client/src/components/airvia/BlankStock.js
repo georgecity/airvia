@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
@@ -11,7 +10,7 @@ const Blank = props => ( //functional react component, no state or lifecycle met
         <td>{props.blank.blankID}</td>
         <td>{props.blank.status}</td>
         <td>
-         <a href="#" onClick={() => {props.deleteBlank(props.blank._id)}}>delete</a>
+         <Button variant="contained" color="default" onClick={() =>{props.deleteBlank(props.blank._id)}}>Delete</Button>
         </td>
     </tr>
 )

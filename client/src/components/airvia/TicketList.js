@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 const Sales = props => ( //functional react component, no state or lifecycle methods
@@ -13,7 +13,7 @@ const Sales = props => ( //functional react component, no state or lifecycle met
         <td>{props.sale.method}</td>
         <td>{props.sale.ticketAmount}</td>
         <td>
-             <a href="#" onClick={() => {props.deleteSale(props.sale._id)}}>delete</a>
+             <Button variant="contained" color="default" onClick={() =>{props.deleteSale(props.sale._id)}}>Delete</Button>
         </td>
     </tr>
 )

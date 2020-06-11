@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 const Comission = props => ( //functional react component, no state or lifecycle methods
@@ -7,7 +7,7 @@ const Comission = props => ( //functional react component, no state or lifecycle
         <td>{props.comission.creator}</td>
         <td>{props.comission.comission}</td>
         <td>
-             <a href="#" onClick={() => {props.deleteComission(props.comission._id)}}>Delete</a>
+             <Button variant="contained" color="default" onClick={() =>{props.deleteComission(props.comission._id)}}>Delete</Button>
         </td>
     </tr>
 )

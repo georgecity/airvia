@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 const Discount = props => ( //functional react component, no state or lifecycle methods
@@ -9,7 +9,7 @@ const Discount = props => ( //functional react component, no state or lifecycle 
         <td>{props.discount.discount}</td>
         <td>{props.discount.condition}</td>
         <td>
-           <a href="#" onClick={() => {props.deleteDiscount(props.discount._id)}}>Delete</a>
+           <Button variant="contained" color="default" onClick={() =>{props.deleteDiscount(props.discount._id)}}>Delete</Button>
         </td>
     </tr>
 )

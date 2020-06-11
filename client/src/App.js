@@ -104,7 +104,6 @@ class App extends Component {
                         <IsAuth path="/api/discounts/"  exact component={DiscountList} />
                         <IsAuth path="/api/users/profile/:id"  exact component={EditProfile} />
 
-
                         <NotAuth exact path="/api/users/login" component={Login} />
                         <Route exact path="/" component={Home} />
                         <IsAuth exact path="/dashboard" component={Dashboard} />

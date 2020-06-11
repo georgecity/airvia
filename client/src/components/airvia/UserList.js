@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import axios from 'axios';
 
 const User = props => ( //functional react component, no state or lifecycle methods
@@ -10,7 +11,10 @@ const User = props => ( //functional react component, no state or lifecycle meth
         <td>{props.user.email}</td>
         <td>{props.user.role}</td>
         <td>
-            <Link to={"edit/"+props.user._id}>edit</Link> | <a href="#" onClick={() => {props.deleteUser(props.user._id)}}>delete</a>
+            <Link to={"edit/"+props.user._id}>edit</Link>
+        </td>
+        <td>
+            <Button variant="contained" color="default" onClick={() =>{props.deleteUser(props.user._id)}}>Delete</Button>
         </td>
     </tr>
 )
@@ -64,6 +68,7 @@ export default class UserList extends Component {
                             <th>Contact Number</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
@@ -72,11 +72,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Name: </label>
                         <input type="text"
                             required
-                            
+                            id="name"
                             value={this.state.name}
                             onChange={this.onChange}
                             error={errors.name}
-                            id="name"
                             className={classnames("", {
                                 invalid: errors.name
                             })}
@@ -87,11 +86,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Address: </label>
                         <input type="text"
                             required
-                            
+                            id="address"
                             value={this.state.address}
                             onChange={this.onChange}
                             error={errors.address}
-                            id="address"
                             className={classnames("", {
                                 invalid: errors.address
                             })}
@@ -102,11 +100,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Contact Number: </label>
                         <input 
                             type="text"
-                    
+                            id="contactNumber"
                             value={this.state.contactNumber}
                             onChange={this.onChange}
                             error={errors.contactNumber}
-                            id="contactNumber"
                             className={classnames("", {
                                 invalid: errors.contactNumber
                             })}
@@ -117,11 +114,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Email: </label>
                         <input 
                             type="email"
-                            
+                            id="email"
                             value={this.state.email}
                             onChange={this.onChange}
                             error={errors.email}
-                            id="email"
                             className={classnames("", {
                                 invalid: errors.name
                             })}
@@ -132,11 +128,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Password: </label>
                         <input
                             type="password"
-                            
+                            id="password"
                             value={this.state.password}
                             onChange={this.onChange}
                             error={errors.password}
-                            id="password"
                             className={classnames("", {
                                 invalid: errors.password
                             })}
@@ -147,11 +142,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Confirm Password: </label>
                         <input
                             type="password"
-                            
+                            id="password2"
                             value={this.state.password2}
                             onChange={this.onChange}
                             error={errors.password2}
-                            id="password2"
                             className={classnames("", {
                                 invalid: errors.password2
                             })}
@@ -162,10 +156,10 @@ static getDerivedStateFromProps(nextProps, prevState){
                         <label>Role: </label>
                         <select ref="userInput"
                             required
+                            id="role"
                             value={this.state.role}
                             onChange={this.onChange}
                             error={errors.eole}
-                            id="role"
                             className={classnames("", {
                                 invalid: errors.role
                             })}>
