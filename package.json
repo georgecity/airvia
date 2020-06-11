@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "airvia system to record ticket sales",
   "main": "server.js",
+  "engines":{
+    "node": "12.14.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
+    "client-install": "npm install --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
